@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1 th:text="Registro">form</h1>
+<form action="#"  th:action="@{/addComic}"  th:object="${Comic}" method="POST" >
+  <div>
+    <label th:text="Name">Nom Comic</label>
+    <input type="text" id="username" th:field="*{nomComic}"/>
+    <p th:each="error: ${#fields.errors('nomComic')}"
+       th:text="${error}">Validation error</p>
+  </div>
+  <div>
+    <label th:text="autorComic">Autor Comic</label>
+    <input type="text"  th:field="*{autorComic}"/>
+    <p th:each="error : ${#fields.errors('autorComic')}"
+       th:text="${error}">Validation error</p>
+  </div>
+  <button type="submit" th:text="Submit">submit</button>
+</form>
+</br>
+</br>
+</br>
+</br>
+<form th:action="@{/logout}" method="post">
+  <input type="submit" value="Sortir (Sign Out)"/>
+</form>
+</body>
+</html>
