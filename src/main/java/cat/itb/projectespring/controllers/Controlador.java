@@ -42,13 +42,13 @@ public class Controlador {
     @GetMapping("/registration")
     public String showRegistrationForm(WebRequest request, Model model) {
 
-        model.addAttribute("usuari", new Usuari());
+        model.addAttribute("Usuari", new Usuari());
         return "register";
 
     }
 
     @PostMapping("/registration")
-    public String afegirSubmit(@ModelAttribute("usuari") Usuari e){
+    public String afegirSubmit(@ModelAttribute("Usuari") Usuari e){
 
         e.setRol("USER");
         userService.afegir(e);

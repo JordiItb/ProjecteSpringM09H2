@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <h1 th:text="Registro">form</h1>
-<form action="#"  th:action="@{/registration}"  th:object="${usuari}" method="POST" >
+<form action="#"  th:action="@{/registration}"  th:object="${Usuari}" method="POST" >
   <div>
     <label th:text="Name">first</label>
     <input type="text" id="username" th:field="*{username}"/>
