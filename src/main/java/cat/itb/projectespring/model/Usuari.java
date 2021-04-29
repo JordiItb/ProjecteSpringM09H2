@@ -24,7 +24,6 @@ public class Usuari {
     private String rol;
 
 
-
     public Usuari(String name, String password, String matchingPassword) {
         this.username = name;
         this.password = password;
